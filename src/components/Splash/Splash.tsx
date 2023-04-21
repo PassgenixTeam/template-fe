@@ -3,7 +3,7 @@ import { shallowEqual } from "react-redux";
 import { joinCls } from "../../utilities/text.utils";
 import Animation from "../Animation/Animation";
 
-import style from "./style.module.css";
+import style from "./style.module.scss";
 import { setPageLoading } from "../../services/loading/redux/loading.slice";
 import { useAppDispatch } from "../../redux/hooks/useAppDispatch";
 import { useAppSelector } from "../../redux/hooks/useAppSelector";

@@ -3,7 +3,7 @@ import Image from "../../components/Image/Image";
 import Navigator from "../../components/Navigator/Navigator";
 import { joinCls } from "../../utilities/text.utils";
 import errorImg from "./Images/constuction.svg";
-import style from "./style.module.css";
+import style from "./style.module.scss";
 
 export default function ErrorPage({}: ErrorPageProps) {
 	const error: any = useRouteError();

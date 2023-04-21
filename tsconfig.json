@@ -27,15 +27,15 @@
 		"module": "esnext"                                    /* Specify what module code is generated. */,
 		// "rootDir": "./",                                   /* Specify the root folder within your source files. */
 		"moduleResolution": "node"                            /* Specify how TypeScript looks up a file from a given module specifier. */,
-		"baseUrl": "./src",                                     /* Specify the base directory to resolve non-relative module names. */
+		"baseUrl": "./src",                                   /* Specify the base directory to resolve non-relative module names. */
 		"paths": {
-      "@root/*": ["./src/root/*"],
-      "@components/*": ["./src/components/*"],
-      "@pages/*": ["./src/pages/*"],
-      "@redux/*": ["./src/redux/*"],
-      "@router/*": ["./src/router/*"],
-      "@services/*": ["./src/services/*"],
-      "@utilities/*": ["./src/utilities/*"]
+      "@global/*": ["./global/*"],
+      "@components/*": ["./components/*"],
+      "@pages/*": ["./pages/*"],
+      "@redux/*": ["./redux/*"],
+      "@router/*": ["./router/*"],
+      "@services/*": ["./services/*"],
+      "@utilities/*": ["./utilities/*"]
     },                                                    /* Specify a set of entries that re-map imports to additional lookup locations. */
 		// "rootDirs": [],                                    /* Allow multiple folders to be treated as one when resolving modules. */
 		// "typeRoots": [],                                   /* Specify multiple folders that act like `./node_modules/@types`. */

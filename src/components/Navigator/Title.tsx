@@ -1,6 +1,5 @@
 import { Helmet } from "react-helmet";
-import { matchPath, useLocation } from "react-router-dom";
-import { HOME_PAGE_PATH } from "../../pages/Home/constants";
+import { useLocation } from "react-router-dom";
 
 function Title({ navLinks = [] }) {
 	const location = useLocation();

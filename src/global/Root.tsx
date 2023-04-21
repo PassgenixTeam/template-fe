@@ -1,19 +1,13 @@
-import { Outlet } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { shallowEqual } from "react-redux";
+import { BrowserRouter, Outlet } from "react-router-dom";
 import Navigator from "../components/Navigator/Navigator";
 import Splash from "../components/Splash/Splash";
-import { shallowEqual } from "react-redux";
 import AppSuspense from "../services/loading/AppSuspense";
-import { useEffect, useState } from "react";
 import { joinCls } from "../utilities/text.utils";
 
-import "./style/root.style.css";
-import "./style/button.style.css";
-import "./style/text.style.css";
-import "./style/spacing.style.css";
-import "./style/sizing.style.css";
-import "./style/animation.style.css";
-import "./style/custom.style.css";
 import { useAppSelector } from "../redux/hooks/useAppSelector";
+import "./style/animation.style.scss";
 
 function Root() {
 	const { isPageLoading } = useAppSelector((state) => state.loading, shallowEqual);
@@ -24,7 +18,7 @@ function Root() {
 	}, [isPageLoading, setIsStartedSplash]);
 
 	return (
-		<>
+		<BrowserRouter>
 			<div className={joinCls("mt-5", isPageLoading || !isStartedSplash ? "invisible" : undefined)}>
 				{/* Navigation bar */}
 				<Navigator />
@@ -37,7 +31,7 @@ function Root() {
 
 			{/* Splash */}
 			<Splash onStart={() => setIsStartedSplash(true)} />
-		</>
+		</BrowserRouter>
 	);
 }
 
