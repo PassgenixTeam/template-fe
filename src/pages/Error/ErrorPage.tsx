@@ -1,5 +1,4 @@
 import { useRouteError } from "react-router-dom";
-import Footer from "../../components/Footer/Footer";
 import Image from "../../components/Image/Image";
 import Navigator from "../../components/Navigator/Navigator";
 import { joinCls } from "../../utilities/text.utils";
@@ -7,7 +6,7 @@ import errorImg from "./Images/constuction.svg";
 import style from "./style.module.css";
 
 export default function ErrorPage({}: ErrorPageProps) {
-	const error = useRouteError();
+	const error: any = useRouteError();
 	console.error(error);
 
 	return (
@@ -25,7 +24,6 @@ export default function ErrorPage({}: ErrorPageProps) {
 					<button className="text-uppercase btn btn-outline-gradient rounded-pill px-4">Back to Home</button>
 				</div>
 			</div>
-			<Footer className="mt-10" />
 		</div>
 	);
 }

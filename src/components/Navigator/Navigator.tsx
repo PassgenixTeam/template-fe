@@ -18,7 +18,7 @@ export default function Navigator() {
 
 	return (
 		<Fragment>
-			<Title navLinks={navLinks} />
+			<Title />
 
 			<nav className={joinCls("navbar navbar-expand-lg bg-dark navbar-dark p-0 fixed-top", style["navbar"])}>Navbar</nav>
 		</Fragment>

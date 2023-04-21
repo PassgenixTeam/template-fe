@@ -1,7 +1,6 @@
 import { useEffect } from "react";
 import FontFaceObserver from "fontfaceobserver";
-import { useAppDispatch } from "../../redux/hooks/useAppDispatch";
-import { setFontLoading } from "./redux/font.slice";
+import { useAppDispatch } from "@redux/hooks/useAppDispatch";
 
 // Service provider in Root component
 export function FontProvider({ children }: FontProviderProps) {
