@@ -1,13 +1,13 @@
 import { useEffect, useState } from "react";
 import { shallowEqual } from "react-redux";
-import { BrowserRouter, Outlet } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 import Navigator from "../components/Navigator/Navigator";
-import Splash from "../components/Splash/Splash";
+import { useAppSelector } from "../redux/hooks/useAppSelector";
 import AppSuspense from "../services/loading/AppSuspense";
 import { joinCls } from "../utilities/text.utils";
 
-import { useAppSelector } from "../redux/hooks/useAppSelector";
 import "./style/animation.style.scss";
+import "./style/global.style.scss";
 
 function Root() {
 	const { isPageLoading } = useAppSelector((state) => state.loading, shallowEqual);
@@ -18,7 +18,7 @@ function Root() {
 	}, [isPageLoading, setIsStartedSplash]);
 
 	return (
-		<BrowserRouter>
+		<>
 			<div className={joinCls("mt-5", isPageLoading || !isStartedSplash ? "invisible" : undefined)}>
 				{/* Navigation bar */}
 				<Navigator />
@@ -30,8 +30,8 @@ function Root() {
 			</div>
 
 			{/* Splash */}
-			<Splash onStart={() => setIsStartedSplash(true)} />
-		</BrowserRouter>
+			{/* <Splash onStart={() => setIsStartedSplash(true)} /> */}
+		</>
 	);
 }
 

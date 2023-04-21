@@ -1,5 +1,5 @@
 interface LanguageProviderProps {
-	children: React.ReactNode;
+	children: any;
 }
 
 type LocaleName = "en" | "vi";

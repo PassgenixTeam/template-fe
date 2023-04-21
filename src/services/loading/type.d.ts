@@ -1,3 +1,3 @@
 interface AppSuspenseProps {
-	children: React.ReactNode;
+	children: any;
 }

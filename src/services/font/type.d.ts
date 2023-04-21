@@ -1,3 +1,3 @@
 interface FontProviderProps {
-	children: React.ReactNode;
+	children: any;
 }

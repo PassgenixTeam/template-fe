@@ -1,9 +1,7 @@
-import style from "./style.module.scss";
-
 export default function HomePage({}: HomeProps) {
-  return (
-    <div className="position-relative bg-light overflow-hidden">
-      <h1 className={style["title"]}>HOME</h1>
-    </div>
-  );
+	return (
+		<div className="bg-light">
+			<h1 className="text-heading">HOME</h1>
+		</div>
+	);
 }
