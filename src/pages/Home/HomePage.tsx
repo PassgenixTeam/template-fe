@@ -1,7 +1,7 @@
 export default function HomePage({}: HomeProps) {
 	return (
-		<div className="bg-light">
-			<h1 className="text-heading">HOME</h1>
+		<div className="bg-dark">
+			<h1 className="font-heading text-9xl">HOME</h1>
 		</div>
 	);
 }

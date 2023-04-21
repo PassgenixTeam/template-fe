@@ -12,7 +12,9 @@ export function FontProvider({ children }: FontProviderProps) {
 
 		const fonts = ["Google Sans", "Merienda One", "Quicksand"];
 		const fontObservers = fonts.map((font) => new FontFaceObserver(font));
-		Promise.all(fontObservers.map((fontObserver) => fontObserver.load())).then(() => dispatch(setFontLoading(false)));
+		Promise.all(fontObservers.map((fontObserver) => fontObserver.load()))
+			.then(() => dispatch(setFontLoading(false)))
+			.catch(() => dispatch(setFontLoading(false)));
 
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);

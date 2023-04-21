@@ -5,6 +5,7 @@ import Navigator from "../components/Navigator/Navigator";
 import { useAppSelector } from "../redux/hooks/useAppSelector";
 import AppSuspense from "../services/loading/AppSuspense";
 import { joinCls } from "../utilities/text.utils";
+import Splash from "@components/Splash/Splash";
 
 import "./style/animation.style.scss";
 import "./style/global.style.scss";
@@ -30,7 +31,7 @@ function Root() {
 			</div>
 
 			{/* Splash */}
-			{/* <Splash onStart={() => setIsStartedSplash(true)} /> */}
+			<Splash onStart={() => setIsStartedSplash(true)} />
 		</>
 	);
 }
