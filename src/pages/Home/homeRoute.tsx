@@ -4,9 +4,7 @@ import { RouteObject } from "react-router-dom";
 
 const HomePage = lazy(() => import("./HomePage"));
 
-const homeRoute: RouteObject = {
+export const homeRoute: RouteObject = {
 	path: HOME_PAGE_PATH,
 	element: <HomePage />,
 };
-
-export default homeRoute;

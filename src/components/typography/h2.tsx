@@ -1,17 +1,8 @@
-import * as React from "react";
 import { joinCls } from "@utilities/text.utils";
-import textStyle from "./text-style";
+import { forwardRef } from "react";
 
-type H2Props = {
-	children: React.ReactNode;
-} & React.HTMLAttributes<HTMLHeadingElement>;
-
-const H2 = ({ children, className = "", ...props }: H2Props) => {
-	return (
-		<h2 className={joinCls(textStyle.h2, className)} {...props}>
-			{children}
-		</h2>
-	);
-};
-
-export default H2;
+export const H2 = forwardRef<HTMLHeadingElement, HeadingProps>(({ children, className, ...props }, ref) => (
+	<h2 ref={ref} className={joinCls("font-heading font-black tracking-tighter text-3xl", className)} {...props}>
+		{children}
+	</h2>
+));

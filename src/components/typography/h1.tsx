@@ -1,11 +1,8 @@
 import { joinCls } from "@utilities/text.utils";
+import { forwardRef } from "react";
 
-const H1 = ({ children, className = "", ...props }: H1Props) => {
-	return (
-		<h1 className={joinCls("font-heading font-black tracking-tight text-5xl", className)} {...props}>
-			{children}
-		</h1>
-	);
-};
-
-export default H1;
+export const H1 = forwardRef<HTMLHeadingElement, HeadingProps>(({ children, className, ...props }, ref) => (
+	<h1 ref={ref} className={joinCls("font-heading font-black tracking-tighter text-5xl", className)} {...props}>
+		{children}
+	</h1>
+));

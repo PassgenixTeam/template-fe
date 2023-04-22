@@ -21,10 +21,13 @@ const rawMessages: MessageCollection[] = [];
 const enMessages = generateMessages(rawMessages, "en");
 const viMessages = generateMessages(rawMessages, "vi");
 
-// All generated messages by locale
-const messagesCategory: Record<LocaleName, Message> = {
+/**
+ * All messages of the application with specified locale
+ *
+ * @example messagesCategory.en => All messages of the application with English locale
+ * @example messagesCategory.vi => All messages of the application with Vietnamese locale
+ */
+export const messagesCategory: Record<LocaleName, Message> = {
 	en: enMessages,
 	vi: viMessages,
 };
-
-export default messagesCategory;

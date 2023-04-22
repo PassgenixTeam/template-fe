@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 
-export default function Animation({ watching, animation = [], onAnimating = () => {}, onAnimated = () => {}, className, style, children, ...props }: AnimationProps) {
+export const Animation = ({ watching, animation = [], onAnimating = () => {}, onAnimated = () => {}, className, style, children, ...props }: AnimationProps) => {
 	const refContainer = useRef<HTMLDivElement>(null);
 	const [currentAnimationIndex, setCurrentAnimationIndex] = useState(0);
 
@@ -47,4 +47,4 @@ export default function Animation({ watching, animation = [], onAnimating = () =
 			{children}
 		</div>
 	);
-}
+};

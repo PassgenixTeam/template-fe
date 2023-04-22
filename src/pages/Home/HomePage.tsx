@@ -1,7 +1,10 @@
-export default function HomePage({}: HomeProps) {
+export const HomePage = ({}: HomeProps) => {
 	return (
-		<div className="bg-dark">
-			<h1 className="font-heading text-9xl">HOME</h1>
+		<div className="bg-light">
+			<h1 className="font-black text-9xl">HOME</h1>
 		</div>
 	);
-}
+};
+
+// Using for lazy loading page
+export default HomePage;

@@ -1,11 +1,10 @@
 import { useRouteError } from "react-router-dom";
-import Image from "../../components/Image/Image";
-import Navigator from "../../components/Navigator/Navigator";
-import { joinCls } from "../../utilities/text.utils";
 import errorImg from "./Images/constuction.svg";
 import style from "./style.module.scss";
+import { joinCls } from "@utilities";
+import { Image, Navigator } from "@components";
 
-export default function ErrorPage({}: ErrorPageProps) {
+export const ErrorPage = ({}: ErrorPageProps) => {
 	const error: any = useRouteError();
 	console.error(error);
 
@@ -26,4 +25,7 @@ export default function ErrorPage({}: ErrorPageProps) {
 			</div>
 		</div>
 	);
-}
+};
+
+// Using for lazy loading page
+export default ErrorPage;

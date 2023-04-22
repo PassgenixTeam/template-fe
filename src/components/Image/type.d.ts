@@ -1,6 +1,4 @@
-interface ImageProps extends React.HTMLAttributes<HTMLDivElement> {
-  src: string;
-  lazy?: boolean;
-  fade?: boolean;
-  alt?: string;
+interface ImageProps extends React.ImgHTMLAttributes<HTMLImageElement> {
+	lazy?: boolean;
+	fade?: boolean;
 }

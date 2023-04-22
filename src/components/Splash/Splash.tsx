@@ -1,14 +1,12 @@
-import { useEffect, useState } from "react";
+import { forwardRef, useEffect, useState } from "react";
 import { shallowEqual } from "react-redux";
-import { joinCls } from "../../utilities/text.utils";
-import Animation from "../Animation/Animation";
+import { useAppDispatch } from "store/hooks/useAppDispatch";
+import { useAppSelector } from "store/hooks/useAppSelector";
+import { setPageLoading } from "@services/loading/redux/loading.slice";
+import { Animation } from "@components/animation";
+import { joinCls } from "@utilities/text.utils";
 
-import style from "./style.module.scss";
-import { setPageLoading } from "../../services/loading/redux/loading.slice";
-import { useAppDispatch } from "../../redux/hooks/useAppDispatch";
-import { useAppSelector } from "../../redux/hooks/useAppSelector";
-
-export default function Splash({ className, children, onStart = () => {}, ...props }: SplashProps) {
+export const Splash = forwardRef<HTMLDivElement, SplashProps>(({ className, children, onStart = () => {}, ...props }, ref) => {
 	const dispatch = useAppDispatch();
 	const { isPageLoading } = useAppSelector((state) => state.loading, shallowEqual);
 	const { isLoading: isFontLoading } = useAppSelector((state) => state.font);
@@ -59,7 +57,9 @@ export default function Splash({ className, children, onStart = () => {}, ...pro
 			className={joinCls("position-fixed top-0 start-0 bg-light vw-100 vh-100 z-3", className)}
 			{...props}
 		>
-			<div className="row justify-content-center align-items-center h-100">Loading</div>
+			<div ref={ref} className="row justify-content-center align-items-center h-100">
+				Loading
+			</div>
 		</Animation>
 	) : null;
-}
+});

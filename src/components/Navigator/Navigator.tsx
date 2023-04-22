@@ -1,12 +1,15 @@
+import { forwardRef } from "react";
 import { joinCls } from "../../utilities/text.utils";
-import style from "./style.module.scss";
+import { Title } from "./Title";
 
-export default function Navigator() {
+export const Navigator = forwardRef<HTMLDivElement, NavigatorProps>(({ className, ...props }, ref) => {
 	return (
 		<>
-			{/* <Title /> */}
+			<Title />
 
-			<nav className={joinCls("navbar navbar-expand-lg bg-dark navbar-dark p-0 fixed-top", style["navbar"])}>Navbar</nav>
+			<nav ref={ref} className={joinCls("fixed top-0", className)} {...props}>
+				TODO: Navbar
+			</nav>
 		</>
 	);
-}
+});

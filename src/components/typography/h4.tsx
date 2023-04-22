@@ -1,17 +1,8 @@
-import * as React from "react";
 import { joinCls } from "@utilities/text.utils";
-import textStyle from "./text-style";
+import { forwardRef } from "react";
 
-type H4Props = {
-	children: React.ReactNode;
-} & React.HTMLAttributes<HTMLHeadingElement>;
-
-const H4 = ({ children, className = "", ...props }: H4Props) => {
-	return (
-		<h4 className={joinCls(textStyle.h4, className)} {...props}>
-			{children}
-		</h4>
-	);
-};
-
-export default H4;
+export const H4 = forwardRef<HTMLHeadingElement, HeadingProps>(({ children, className, ...props }, ref) => (
+	<h4 ref={ref} className={joinCls("font-heading font-bold text-lg", className)} {...props}>
+		{children}
+	</h4>
+));

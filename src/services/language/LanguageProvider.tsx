@@ -1,7 +1,7 @@
+import { useAppSelector } from "@store";
 import { IntlProvider } from "react-intl";
-import { useAppSelector } from "../../redux/hooks/useAppSelector";
 import { shallowEqual } from "react-redux";
-import messagesCategory from "./messages-category";
+import { messagesCategory } from "./messages-category";
 
 export function LanguageProvider({ children }: LanguageProviderProps) {
 	const locale = useAppSelector((state) => state.language.locale, shallowEqual);

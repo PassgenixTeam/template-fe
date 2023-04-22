@@ -17,5 +17,4 @@ export const loadingSlice = createSlice({
 export const { setPageLoading } = loadingSlice.actions;
 
 // Export reducer
-const loadingReducer = loadingSlice.reducer;
-export default loadingReducer;
+export const loadingReducer = loadingSlice.reducer;

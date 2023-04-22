@@ -1,19 +1,15 @@
 import * as React from "react";
 import { joinCls } from "@utilities/text.utils";
-import textStyle from "./text-style";
 
 type TextProps = {
 	children: React.ReactNode;
 	isSpan?: boolean;
 } & React.HTMLAttributes<HTMLHeadingElement>;
 
-const Text = ({ children, isSpan = false, className = "", ...props }: TextProps) => {
-	const elementProps = {
-		className: joinCls(textStyle.normal, className),
-		...props,
-	};
-
-	return isSpan ? <span {...elementProps}>{children}</span> : <p {...elementProps}>{children}</p>;
-};
+const Text = React.forwardRef<HTMLParagraphElement, TextProps>(({ children, isSpan = false, className, ...props }, ref) => (
+	<p ref={ref} className={joinCls("font-body font-bold text-base", className)} {...props}>
+		{children}
+	</p>
+));
 
 export default Text;

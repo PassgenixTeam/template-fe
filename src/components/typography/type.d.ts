@@ -1,3 +1,3 @@
-type H1Props = {
-	children: React.ReactNode;
-} & React.HTMLAttributes<HTMLHeadingElement>;
+interface HeadingProps extends React.HTMLAttributes<HTMLHeadingElement> {}
+
+interface TextProps extends React.HTMLAttributes<HTMLParagraphElement> {}

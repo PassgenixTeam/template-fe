@@ -1,7 +1,7 @@
 import { Helmet } from "react-helmet";
 import { useLocation } from "react-router-dom";
 
-function Title({ navLinks = [] }) {
+export const Title = () => {
 	const location = useLocation();
 
 	const title = location.pathname;
@@ -11,6 +11,4 @@ function Title({ navLinks = [] }) {
 			<title>{title}</title>
 		</Helmet>
 	);
-}
-
-export default Title;
+};

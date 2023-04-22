@@ -17,5 +17,4 @@ export const fontSlice = createSlice({
 export const { setFontLoading } = fontSlice.actions;
 
 // Export reducer
-const fontReducer = fontSlice.reducer;
-export default fontReducer;
+export const fontReducer = fontSlice.reducer;

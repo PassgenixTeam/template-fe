@@ -17,5 +17,4 @@ export const languageSlice = createSlice({
 export const { setLanguageLoading } = languageSlice.actions;
 
 // Export reducer
-const languageReducer = languageSlice.reducer;
-export default languageReducer;
+export const languageReducer = languageSlice.reducer;

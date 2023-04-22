@@ -1,7 +1,7 @@
-import store from "@redux/store";
-import router from "@router/browserRouter";
+import { router } from "@router";
 import { FontProvider } from "@services/font/FontProvider";
 import { LanguageProvider } from "@services/language/LanguageProvider";
+import { store } from "@store";
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { Provider } from "react-redux";

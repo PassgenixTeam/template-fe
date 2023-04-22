@@ -1,9 +1,9 @@
-import ErrorPage from "@pages/Error/ErrorPage";
-import homeRoute from "@pages/Home/homeRoute";
-import Root from "global/Root";
+import { Root } from "@global";
+import { ErrorPage } from "@pages/Error";
+import { homeRoute } from "@pages/Home";
 import { createBrowserRouter } from "react-router-dom";
 
-const router = createBrowserRouter([
+export const router = createBrowserRouter([
 	{
 		path: "/",
 		element: <Root />,
@@ -11,5 +11,3 @@ const router = createBrowserRouter([
 		children: [homeRoute],
 	},
 ]);
-
-export default router;

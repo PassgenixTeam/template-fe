@@ -1,6 +1,6 @@
 import { Suspense, useEffect } from "react";
 import { setPageLoading } from "./redux/loading.slice";
-import { useAppDispatch } from "../../redux/hooks/useAppDispatch";
+import { useAppDispatch } from "../../store/hooks/useAppDispatch";
 
 function SuspenseFallback() {
 	const dispatch = useAppDispatch();
@@ -17,6 +17,6 @@ function SuspenseFallback() {
 	return <></>;
 }
 
-export default function AppSuspense({ children }: AppSuspenseProps) {
+export const AppSuspense = ({ children }: AppSuspenseProps) => {
 	return <Suspense fallback={<SuspenseFallback />}>{children}</Suspense>;
-}
+};
