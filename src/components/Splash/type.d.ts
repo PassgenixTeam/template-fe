@@ -1,3 +1,3 @@
 type SplashProps = {
-  onStart: () => void;
+	onStart: () => void;
 } & React.HTMLAttributes<HTMLDivElement>;

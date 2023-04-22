@@ -6,15 +6,10 @@ const systemFontFamily = {
 	body: ["Comfortaa"],
 };
 
-// // Font using in compiled css
-// const fontFamily = Object.keys(systemFontFamily).reduce((acc, key) => {
-// 	acc[key] = [...systemFontFamily[key], ...defaultTheme.fontFamily.sans];
-// 	return acc;
-// }, {});
-
-const fontFamily = {
-	heading: ["Raleway", ...defaultTheme.fontFamily.sans],
-	body: ["Comfortaa", ...defaultTheme.fontFamily.sans],
-};
+// Font using in compiled css
+const fontFamily = Object.keys(systemFontFamily).reduce((acc, key) => {
+	acc[key] = [...systemFontFamily[key], ...defaultTheme.fontFamily.sans];
+	return acc;
+}, {});
 
 export { fontFamily };

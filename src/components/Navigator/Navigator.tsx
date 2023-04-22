@@ -1,6 +1,6 @@
 import { forwardRef } from "react";
-import { joinCls } from "../../utilities/text.utils";
 import { Title } from "./Title";
+import { joinCls } from "@utilities";
 
 export const Navigator = forwardRef<HTMLDivElement, NavigatorProps>(({ className, ...props }, ref) => {
 	return (

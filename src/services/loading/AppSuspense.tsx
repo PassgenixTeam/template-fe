@@ -1,6 +1,6 @@
 import { Suspense, useEffect } from "react";
-import { setPageLoading } from "./redux/loading.slice";
-import { useAppDispatch } from "../../store/hooks/useAppDispatch";
+import { useAppDispatch } from "@store";
+import { setPageLoading } from "./redux";
 
 function SuspenseFallback() {
 	const dispatch = useAppDispatch();
